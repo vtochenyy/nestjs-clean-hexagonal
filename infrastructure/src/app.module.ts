@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './database/database.module';
 import { APP_INTERCEPTOR } from '@nestjs/core';
-import { LoggingInterceptor } from '../../adapters/web/common/interceptors/logInterceptor';
+import { LoggingInterceptor } from '../../adapters/web/common/interceptors/log.interceptor';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { path } from 'app-root-path';
 

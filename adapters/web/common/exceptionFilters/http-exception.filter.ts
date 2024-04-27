@@ -7,8 +7,8 @@ import {
     Logger,
 } from '@nestjs/common';
 import { Request, Response } from 'express';
-import { CustomHttpException } from './customHttpException';
-import { BAD_REQUEST_EXCEPTION, FORBIDDEN_EXCEPTION } from './exceptionsConstants';
+import { CustomHttpException } from './custom-http-exception';
+import { BAD_REQUEST_EXCEPTION, FORBIDDEN_EXCEPTION } from './exceptions.constant';
 
 //TODO: describe types for classEntity-validator exceptions
 @Catch(HttpException, CustomHttpException)
