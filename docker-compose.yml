@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+    postgres:
+        image: postgres:13.3
+        container_name: ${DB_CONTAINER_NAME}
+        env_file:
+            - .env
+        environment:
+            POSTGRES_DB: ${DATABASE}
+            POSTGRES_USER: ${USER}
+            POSTGRES_PASSWORD: ${PASS}
+        volumes:
+            - ${VOLUME_DATA}
+        ports:
+            - ${DB_PORT}:5432
+        restart: unless-stopped
+        deploy:
+            resources:
+                limits:
+                    cpus: '1'
+                    memory: 4G
